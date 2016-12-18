@@ -13,5 +13,16 @@ class Image implements Elem{
 		echo $this->img;
 		}
 }
+
+class Text implements Elem{
+	public $text;
+	function __construct($text){
+		$this->text = $text;	
+	}
+	
+	function printEl(){
+		echo $this->text;
+		}
+}
 	
 ?>
