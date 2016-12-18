@@ -5,3 +5,6 @@ class Coffee{
 		$this->price = $price;
 	}
 }
+abstract class CoffeMaker{
+	abstract public function process (Coffee $coffee);
+}
