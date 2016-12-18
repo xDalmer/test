@@ -21,3 +21,34 @@ abstract class DecorateProcess extends CoffeeMaker {
 		$this->processmaker = $maker;
 	}
 }
+
+class SugarMaker extends DecorateProcess {	
+	function process (Coffee $coffee){
+		$coffee->price += 10;
+		echo __CLASS__, " Стоимость {$coffee->price}<br />";
+		$this->processmaker->process($coffee);
+	}
+}
+
+class MilkMaker extends DecorateProcess {	
+	function process (Coffee $coffee){
+		$coffee->price += 33;
+		echo __CLASS__, " Стоимость {$coffee->price}<br />";
+		$this->processmaker->process($coffee);
+	}
+}
+class SugarMaker extends DecorateProcess {	
+	function process (Coffee $coffee){
+		$coffee->price += 10;
+		echo __CLASS__, " Стоимость {$coffee->price}<br />";
+		$this->processmaker->process($coffee);
+	}
+}
+
+class MilkMaker extends DecorateProcess {	
+	function process (Coffee $coffee){
+		$coffee->price += 33;
+		echo __CLASS__, " Стоимость {$coffee->price}<br />";
+		$this->processmaker->process($coffee);
+	}
+}
